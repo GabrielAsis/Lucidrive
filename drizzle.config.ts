@@ -1,7 +1,7 @@
-import * as dontenv from "dotenv"
+import * as dotenv from "dotenv"
 import { defineConfig } from 'drizzle-kit';
 
-dontenv.config({path: ".env.local"})
+dotenv.config({path: ".env.local"})
 
 if(!process.env.DATABASE_URL) {
   throw new Error("Database url is not set in .env.local")
